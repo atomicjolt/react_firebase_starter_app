@@ -7,10 +7,6 @@ import QueryString    from '../utils/query_string';
 
 var _settings = {};
 
-// Grab the jwt from the payload
-function login(payload){
-  _settings.jwt = payload.data.body.jwt_token;
-}
 
 function loadSettings(defaultSettings){
 
@@ -22,15 +18,11 @@ function loadSettings(defaultSettings){
 
   _settings = {
     apiUrl           : bestValue('apiUrl', 'api_url', '/'),
-    csrfToken        : defaultSettings.csrfToken || null,
-    jwt              : defaultSettings.jwt
+    firebaseUrl      : defaultSettings.firebaseUrl
   };
 
 }
 
-function refreshJwt(payload){
-  _settings.jwt = JSON.parse(payload.data.text).jwt;
-}
 
 // Extend Message Store with EventEmitter to add eventing capabilities
 var SettingsStore = {...StoreCommon, ...{
@@ -49,18 +41,6 @@ Dispatcher.register(function(payload) {
 
     case Constants.SETTINGS_LOAD:
       loadSettings(payload.data);
-      break;
-
-    case Constants.LOGIN:
-      login(payload);
-      break;
-
-    case Constants.LOGOUT:
-      logout(payload);
-      break;
-
-    case Constants.REFRESH_JWT:
-      refreshJwt(payload)
       break;
 
     default:

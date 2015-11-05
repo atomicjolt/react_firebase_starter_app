@@ -95,6 +95,7 @@ gulp.task('html', ['javascript'], function(){
       for(var entry in webpackConfig.entry){
         result = result.replace(entry + settings.buildSuffix, getHashed(entry));
       }
+      result = result.replace("<%= firebaseUrl %>", settings.firebaseUrl);
       html.contents = new Buffer(result);
       this.push(html);
       cb();

@@ -41,6 +41,8 @@ module.exports = {
 
   cssEntries: {
     
-  }
+  },
+
+  firebaseUrl: process.env.FIREBASE_URL
 
 };
