@@ -1,7 +1,8 @@
 #Notes:
 -----------------------
-1. Rename .env.example to .env and change the values as appropriate
-2. Start server with:
+1. Clone this repository
+2. Rename .env.example to .env and change the values as appropriate
+3. Start server with:
 
   `npm run hot`
 
@@ -79,7 +80,7 @@ Inside the client directory run:
     `s3_website cfg apply`
    
 
-#Setup Deploy:
+#Deploy to S3:
 -----------------------
 
   Build a release without deploying:
@@ -91,6 +92,25 @@ Inside the client directory run:
   
   `npm run release`
 
+#Deploy to Firebase:
+-----------------------
+(Firebase hosting quickstart)(https://www.firebase.com/docs/hosting/quickstart.html)
+
+  Install the Firebase tools:
+
+  `npm install -g firebase-tools`
+
+
+  Build the app:
+  
+  `npm run build`
+
+  Deploy the app:
+
+  `firebase deploy`
+
+firebase.json contains the configuration for the deployment. If you need to customize the 
+deployment configuration check out the (advanced hosting guide)[https://www.firebase.com/docs/hosting/guide/full-config.html].
 
 License and attribution
 -----------------------
