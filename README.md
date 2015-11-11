@@ -1,8 +1,12 @@
-#Notes:
+#Getting Started:
 -----------------------
-1. Clone this repository
-2. Rename .env.example to .env and change the values as appropriate
-3. Start server with:
+
+Assuming you have git and npm installed:
+
+1. git clone https://github.com/atomicjolt/react_client_starter_app.git my_project_name
+2. Rename .env.example to .env and change the values as desired. The default should be fine.
+3. npm install
+4. Start server with:
 
   `npm run hot`
 
