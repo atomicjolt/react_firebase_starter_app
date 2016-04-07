@@ -33,15 +33,15 @@ module.exports = {
 
   hotPort: hotPort,
   
-  buildSuffix: '_web_pack_bundle.js',
+  buildSuffix: '_bundle.js',
 
   entries: {
     app: clientAppPath + 'js/app.jsx'
   },
 
   cssEntries: {
-    
-  },
+    styles: clientAppPath + 'styles/styles.js'
+  }
 
   firebaseUrl: process.env.FIREBASE_URL
 
