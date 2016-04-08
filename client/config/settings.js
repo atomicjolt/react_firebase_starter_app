@@ -41,7 +41,7 @@ module.exports = {
 
   cssEntries: {
     styles: clientAppPath + 'styles/styles.js'
-  }
+  },
 
   firebaseUrl: process.env.FIREBASE_URL
 
