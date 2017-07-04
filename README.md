@@ -1,9 +1,9 @@
-#React Client Starter App
+# React Client Starter App
 -----------------------
 There are many starter kits that will help you get started with React and Redux. This is the one created by, maintained by and used by [Atomic Jolt](http://www.atomicjolt.com). Atomic Jolt uses this as application as a starting place for our [Ruby on Rails React starter application](https://github.com/atomicjolt/react_starter_app) and our [Firebase React starter appliction](https://github.com/atomicjolt/react_firebase_starter_app).
 
 
-#Getting Started:
+# Getting Started:
 -----------------------
 
 Make sure to install git and npm before you start then:
@@ -35,21 +35,21 @@ React code can be found in client/js. We use Redux and the React-Router.
 All html files live in client/html. The build process will properly process ejs in any html files as well as process markdown for files that end in .md. All front matter in .md files will be available to the ejs templates. See about.md for an example.
 
 
-#Tests
+# Tests
 -----------
 Karma and Jasmine are used for testing. To run tests run:
 
   `npm run test`
 
 
-#Check for updates
+# Check for updates
 -----------
 Inside the client directory run:
 
   `npm-check-updates`
 
 
-#Setup Deploy:
+# Setup Deploy:
 -----------------------
 
   1. Install the s3_website gem:
@@ -102,7 +102,7 @@ Inside the client directory run:
     `s3_website cfg apply`
 
 
-#Production
+# Production
 -----------------------
 If you want to see what your application will look like in production run
 
@@ -111,7 +111,7 @@ If you want to see what your application will look like in production run
 This will serve files from the build/prod directory.
 
 
-#Deploy:
+# Deploy:
 -----------------------
 
   Build a development release without deploying:
@@ -128,7 +128,7 @@ This will serve files from the build/prod directory.
 
   `npm run release`
 
-#Deploy to Firebase:
+# Deploy to Firebase:
 -----------------------
 (Firebase hosting quickstart)(https://www.firebase.com/docs/hosting/quickstart.html)
 
